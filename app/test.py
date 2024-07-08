@@ -1,7 +1,10 @@
 import requests
 
+url = "http://localhost:5000/reflect"
 
-res = requests.post("http://localhost:5000/reflect", json={"csrf": "1234"})
+res = requests.post(url, json={"csrf": "1234"})
 
-print(res.status_code)
-print(res.content)
+print("Requesting the following url:", url)
+
+print("\nServer status code:", res.status_code)
+print("Server response:", res.content)
